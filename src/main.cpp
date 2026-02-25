@@ -2,12 +2,14 @@
 
 #include <string>
 #include <iostream>
+#include <filesystem>
 
+namespace fs = std::filesystem;
 
 /*==================== 主程序示例 ====================*/
 int main(void)
 {
-    printf("================================\n\n");
+    printf("================================1\n\n");
 
 #ifdef _WIN32
   std::cout << "Windows系统\n";
@@ -25,5 +27,12 @@ int main(void)
 #endif
     printf("data_path:%s\n",data_path);
 
+
+
+
+  fs::path config_path = fs::current_path() / "config" / "settings.ini";
+  std::cout << "配置文件路径: " << config_path << std::endl;
+
+  printf("\n================================\n\n");
     return 0;
 }

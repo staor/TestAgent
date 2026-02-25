@@ -1,0 +1,44 @@
+//跨平台C++开发：vscode-cpptools多系统配置方案 https://blog.csdn.net/gitblog_00614/article/details/151391401
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C/C++: 活动文件调试",
+            "type": "cppdbg",
+            "request": "launch",
+            // "program": "${workspaceFolder}/a.out",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            // "MIMode": "lldb",
+            "MIMode": "${default:miMode}",
+            "preLaunchTask": "C/C++: 构建活动文件",
+            "setupCommands": [
+                {
+                    "description": "为gdb启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "C/C++: cl.exe 构建和调试活动文件",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            // "miDebuggerPath": "C:\\Program Files(x86)\\Microsoft Visual Studio\\22019\\Community\\Common7\\IDE\\Extensions\\Microsoft\\Debugger\\lldb\\bin\\lldb-mi.exe",
+            "miDebuggerPath": "C:\\Program Files (x86)\\Windows Kits\\10\\Debuggers\\x64\\cdb.exe",
+
+            "preLaunchTask": "C/C++: cl.exe 构建活动文件"
+        }
+    ]
+}

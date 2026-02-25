@@ -1,0 +1,56 @@
+{
+    "configurations": [
+        {
+            "name": "Win32", // Windows系统自动选择
+            "compilerPath": "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.28.29910/bin/Hostx64/x64/cl.exe",
+            "includePath": [
+                "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.28.29910/include",
+                "${workspaceFolder}/**"
+                // "/usr/include",
+                // "/usr/local/include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-msvc-x64"
+            // "windowsSdkVersion": "10.0.19041.0"
+            // "compileCommands": "${workspaceFolder}/build/compile_commands.json"
+        },
+        {
+            "name": "Linux", // Linux系统自动选择
+            "compilerPath": "/usr/bin/gcc",
+            "includePath": [
+                "/usr/include",
+                "/usr/local/include",
+                "${workspaceFolder}/**"
+            ],
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+        // {
+        //     "name": "Mac",
+        //     "includePath": [
+        //         "${workspaceFolder}/**",
+        //         "/usr/local/include",
+        //         "/Library/Developer/CommandLineTools/usr/include/c++/v1",
+        //         "/Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include",
+        //         "/Library/Developer/CommandLineTools/usr/include"
+        //     ],
+        //     "defines": [],
+        //     "macFrameworkPath": [
+        //         "/System/Library/Frameworks",
+        //         "/Library/Frameworks"
+        //     ],
+        //     "compilerPath": "/usr/bin/clang++",
+        //     "cStandard": "c11",
+        //     "cppStandard": "c++17",
+        //     "intelliSenseMode": "macos-clang-x64"
+        // }
+    ],
+    "version": 4
+}

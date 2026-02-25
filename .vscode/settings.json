@@ -1,0 +1,18 @@
+//https://zhuanlan.zhihu.com/p/1995259906459181664
+// {
+//     "C_Cpp.default.includePath": [
+//         "${workspaceFolder}/include",
+//         // "/usr/local/include",
+//         "/Library/Developer/CommandLineTools/usr/include/c++/v1"
+//     ],
+//     "C_Cpp.default.compilerPath": "/usr/bin/clang++",
+//     "C_Cpp.default.cppStandard": "c++17",
+//     "editor.formatOnSave": true,
+//     "C_Cpp.clang_format_style": "Google",
+//     "C_Cpp.intelliSenseEngineFallback": "Disabled"
+// }
+
+{
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true
+}

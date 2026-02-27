@@ -3,13 +3,17 @@
 #include <string>
 #include <iostream>
 #include <filesystem>
+#include <cstdio>
 
 namespace fs = std::filesystem;
 
 /*==================== 主程序示例 ====================*/
 int main(void)
 {
-    printf("================================1\n\n");
+    printf("================================4\n\n");
+    //终端中输入 chcp 65001 来设置终端使用 UTF-8 编码 来正确显示中文
+    // printf("__STDC_VERSION__:%ld\n", __STDC_VERSION__);
+    printf("__cplusplus:%ld\n", __cplusplus);
 
 #ifdef _WIN32
   std::cout << "Windows系统\n";
@@ -28,6 +32,7 @@ int main(void)
     printf("data_path:%s\n",data_path);
 
 
+  std::string s = "Hello, World!";
 
 
   fs::path config_path = fs::current_path() / "config" / "settings.ini";

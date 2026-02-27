@@ -14,5 +14,13 @@
 
 {
   "files.eol": "\n",
-  "files.trimTrailingWhitespace": true
+  "files.trimTrailingWhitespace": true,
+  "C_Cpp.default.cppStandard": "c++17",
+  "terminal.integrated.profiles.windows": {
+      "Command Prompt":
+      {
+          "path": "cmd.exe",
+          "args": ["/k", "chcp", "65001"]
+      }
+  }
 }

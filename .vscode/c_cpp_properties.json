@@ -2,22 +2,22 @@
     "configurations": [
         {
             "name": "Win32", // Windows系统自动选择
-            "compilerPath": "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.28.29910/bin/Hostx64/x64/cl.exe",
+            "compilerPath": "cl.exe",//"C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.28.29910/bin/Hostx64/x64/cl.exe",
             "includePath": [
                 "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.28.29910/include",
-                "${workspaceFolder}/**"
-                // "/usr/include",
-                // "/usr/local/include"
+                // "${VCPKG_ROOTDIR}/installed/x64-windows/include",  // vcpkg 管理的第三方库头文件路径，需要设置 VCPKG_ROOT 环境变量
+                "${workspaceFolder}/**" // 包含当前工作区的所有子目录
+
             ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE"
             ],
-            "cStandard": "c11",
+            "cStandard": "c17",
             "cppStandard": "c++17",
             "intelliSenseMode": "windows-msvc-x64"
-            // "windowsSdkVersion": "10.0.19041.0"
+            // "windowsSdkVersion": "10.0.19045"
             // "compileCommands": "${workspaceFolder}/build/compile_commands.json"
         },
         {

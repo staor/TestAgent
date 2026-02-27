@@ -3,7 +3,7 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "C/C++: clang++ 编译所有文件",
+            "label": "C/C++: 构建活动文件",
             "command": "${default:compilerPath}",
             "args": [
                 "-fdiagnostics-color=always",
@@ -11,11 +11,14 @@
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}",
-                                // "/EHsc",
-                "/EHsc /source-charset:utf-8 /execution-charset:utf-8"
+                "-std=c++17", // 设置C++标准为C++17
+                // "-std=c++20", // 设置C++标准为C++20
+                // "-stdlib=libc++" // 如果使用Clang编译器，可能需要指定使用libc++标准库
+                // "-lstdc++fs" // 在 GCC 9 或更高版本中不需要 -lstdc++fs
             ],
             "options": {
                 "cwd": "${fileDirname}"
+                //"cwd": "${workspaceFolder}"
             },
             "problemMatcher": [
                 "$gcc"
@@ -25,6 +28,33 @@
                 "isDefault": true
             },
             "detail": "编译器: ${default:compilerPath}"
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: cl.exe 构建活动文件",
+            "command": "cl.exe",
+            "args": [
+                "/Zi",
+                "/EHsc",
+                "/nologo",
+                "/Fe${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "${file}",
+                "/std:c++17", //对于MSVC 适配C++17标准，若使用C++20则改为/std:c++20
+                "/EHsc", // 处理C++异常
+                "/source-charset:utf-8",
+                "/execution-charset:utf-8"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "编译器: cl.exe"
         }
     ]
 }
